@@ -21,7 +21,7 @@ EXEC_DIR=$(pwd)
 SCRIPT_NAME=$(basename "$0")
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 BACKUP_DIR="$EXEC_DIR"
-PREFIX=$(printf '%(%Y-%m-%d)T')
+PREFIX=`date +'%Y-%m-%d'`
 POSTFIX=""
 
 POSITIONAL_ARGS=()
