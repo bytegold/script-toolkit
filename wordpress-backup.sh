@@ -114,7 +114,7 @@ echo -e "  Backup:\t$BACKUP_DIR"
 echo -e "  Prefix:\t${PREFIX}_"
 echo -e "  Postfix:\t$POSTFIX"
 echo ""
-DISKSPACE=`df -Ph . | tail -1 | awk '{print $4}'`
+DISKSPACE=`df -Ph . 2>/dev/null | tail -1 | awk '{print $4}'`
 echo -e "  $DISKSPACE disk space available"
 echo ""
 read -p "Press enter to continue"
